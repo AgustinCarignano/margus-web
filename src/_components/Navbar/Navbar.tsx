@@ -2,22 +2,36 @@
 
 import React from "react";
 import Styles from "./navbar.module.scss";
+import Image from "next/image";
+import moon from "@src/../public/images/moonIcon.svg";
+import sun from "@src/../public/images/sunIcon.svg";
+import doot from "@src/../public/images/switchIcon.svg";
 
 function Navbar() {
+    const links = ["About", "Services", "Work", "Contact"];
+    const theme = "light";
+    const switchPosition = theme === "light" ? "17px" : "0px";
     return (
         <nav className={Styles.navbar}>
             <h3 className={Styles.navbar__logo}>MAGUS</h3>
             <div className={Styles.navbar__container}>
                 <ul className={Styles.navbar__links}>
-                    <li className={Styles.navbar__links__link}>Homeeee</li>
-                    <li className={Styles.navbar__links__link}>About Us</li>
-                    <li className={Styles.navbar__links__link}>Our Work</li>
-                    <li className={Styles.navbar__links__link}>Contact</li>
+                    {links.map((item, i) => (
+                        <li key={i} className={Styles.navbar__links__link}>
+                            <a href={`#${item.toLowerCase()}`}>{item}</a>
+                        </li>
+                    ))}
                 </ul>
                 <div className={Styles.navbar__icons}>
-                    <span>☀</span>
-                    <span>🌙</span>
-                    <span>🌐</span>
+                    <div className={Styles.navbar__icons__switchOptions}>
+                        <Image src={moon} width={12} alt="moon icon" />
+                        <span className={Styles.navbar__icons__switchButton}>
+                            <Image style={{ transform: `translate(${switchPosition})` }} src={doot} width={12} alt="doot icon" />
+                        </span>
+                        <Image src={sun} width={12} alt="sun icon" />
+                    </div>
+                    <span className={Styles.navbar__icons__langEs}>ES</span>
+                    <span className={Styles.navbar__icons__langEn}>EN</span>
                 </div>
             </div>
         </nav>
