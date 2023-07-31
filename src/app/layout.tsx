@@ -1,9 +1,11 @@
+import Footer from "@src/_components/Footer/Footer";
 import "./globals.css";
+import Styles from "./layout.module.scss";
 import Navbar from "@src/_components/Navbar/Navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Imprima } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const imprima = Imprima({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Magus Web",
@@ -13,11 +15,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <header>
+            <body className={imprima.className}>
+                <header className={Styles.header}>
                     <Navbar />
                 </header>
-                {children}
+                <main className={Styles.main}>{children}</main>
+                <Footer />
             </body>
         </html>
     );
