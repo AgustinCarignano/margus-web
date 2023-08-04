@@ -6,6 +6,7 @@ import Image from "next/image";
 import moon from "@src/../public/images/moonIcon.svg";
 import sun from "@src/../public/images/sunIcon.svg";
 import doot from "@src/../public/images/switchIcon.svg";
+import Link from "next/link";
 
 function Navbar() {
     const links = ["About", "Services", "Work", "Contact"];
@@ -13,12 +14,12 @@ function Navbar() {
     const switchPosition = theme === "light" ? "17px" : "0px";
     return (
         <nav className={Styles.navbar}>
-            <h3 className={Styles.navbar__logo}>MAGUS</h3>
+            <h3 className={Styles.navbar__logo}>MARGUS</h3>
             <div className={Styles.navbar__container}>
                 <ul className={Styles.navbar__links}>
                     {links.map((item, i) => (
                         <li key={i} className={Styles.navbar__links__link}>
-                            <a href={`#${item.toLowerCase()}`}>{item}</a>
+                            <Link href={`#${item.toLowerCase()}`}>{item}</Link>
                         </li>
                     ))}
                 </ul>
