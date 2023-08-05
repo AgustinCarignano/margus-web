@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./navbar.module.scss";
 import Image from "next/image";
 import moon from "@src/../public/images/moonIcon.svg";
@@ -9,12 +9,15 @@ import doot from "@src/../public/images/switchIcon.svg";
 import Link from "next/link";
 
 function Navbar() {
+    const [lightTheme, setLightTheme] = useState(true);
+
     const links = ["About", "Services", "Work", "Contact"];
-    const theme = "light";
-    const switchPosition = theme === "light" ? "17px" : "0px";
+    const switchPosition = lightTheme ? "17px" : "0px";
     return (
         <nav className={Styles.navbar}>
-            <h3 className={Styles.navbar__logo}>MARGUS</h3>
+            <h3 className={Styles.navbar__logo}>
+                <Link href="#">MARGUS</Link>
+            </h3>
             <div className={Styles.navbar__container}>
                 <ul className={Styles.navbar__links}>
                     {links.map((item, i) => (
@@ -26,7 +29,7 @@ function Navbar() {
                 <div className={Styles.navbar__icons}>
                     <div className={Styles.navbar__icons__switchOptions}>
                         <Image src={moon} width={12} alt="moon icon" />
-                        <span className={Styles.navbar__icons__switchButton}>
+                        <span className={Styles.navbar__icons__switchButton} onClick={() => setLightTheme((prev) => !prev)}>
                             <Image style={{ transform: `translate(${switchPosition})` }} src={doot} width={12} alt="doot icon" />
                         </span>
                         <Image src={sun} width={12} alt="sun icon" />
