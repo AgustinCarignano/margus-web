@@ -14,9 +14,9 @@ function ServicesCard({ ImgSrc, title, content, reverse }: Props) {
     //in-line style de prueba
     return (
         <div style={{ display: "flex", flexDirection: `${reverse ? "row-reverse" : "row"}` }}>
-            <Image src={ImgSrc} width={560} height={560} alt={title} />
+            <Image src={ImgSrc} width={560} height={560} alt={title} layout="responsive"/>
             <div>
-                <h4>{title}</h4>
+                <h2>{title}</h2>
                 <p>{content}</p>
             </div>
         </div>
