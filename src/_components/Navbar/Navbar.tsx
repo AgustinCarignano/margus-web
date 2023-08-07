@@ -34,8 +34,8 @@ function Navbar() {
                         </span>
                         <Image src={sun} width={12} alt="sun icon" />
                     </div>
-                    <span className={Styles.navbar__icons__langEs}>ES</span>
-                    <span className={Styles.navbar__icons__langEn}>EN</span>
+                    <span className={Styles.navbar__icons__lang}>ES</span>
+                    <span className={Styles.navbar__icons__lang}>EN</span>
                 </div>
             </div>
         </nav>
