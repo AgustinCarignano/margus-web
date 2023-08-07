@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,15 +22,16 @@ body {
 
 h1 {
     font-size: 3.2rem;
+    font-weight: 400;
 }
 h2 {
-    font-size: 2.7rem;
+    font-size: 3.2rem;
 }
 h3 {
     font-size: 2.1rem;
 }
 p {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
 }
 
 a {
@@ -39,3 +42,15 @@ a {
 ul {
     list-style: none;
 }
+
+header {
+    background: $background;
+    box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+main {
+    padding-top: 100px;
+}
+

@@ -6,11 +6,11 @@ import Image from "next/image";
 function Footer() {
     return (
         <footer>
-            <h3>Gracias por visitar nuestra página, esperamos volver a verte pronto!</h3>
+            <h2>Gracias por visitar nuestra página, esperamos volver a verte pronto!</h2>
             <p>
                 Made with{" "}
                 <span>
-                    <Image src={heart} width={13} height={11} alt="" />
+                    <Image src={heart} width={13} height={11} alt="" layout="responsive"/>
                 </span>{" "}
                 <br />
                 Todos los derechos reservados
