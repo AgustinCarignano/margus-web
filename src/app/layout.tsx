@@ -8,7 +8,7 @@ import { Imprima } from "next/font/google";
 const imprima = Imprima({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Magus Web",
+    title: "Margus Web",
     description: "A simple web page",
 };
 
