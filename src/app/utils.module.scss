@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+.highlightedText {
+  &__aqua {
+    color: $secondary;
+  }
+  &__fucsia {
+    color: $callToAction;
+  }
+}
