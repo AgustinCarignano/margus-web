@@ -1,0 +1,16 @@
+@import "../../app/variables.scss";
+
+.homeSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 110px 30px 0 30px;
+  h3 {
+    max-width: 558px;
+    padding: 50px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+  }
+}
