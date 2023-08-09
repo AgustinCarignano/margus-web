@@ -1,0 +1,11 @@
+.cardContainer {
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__text {
+    //me esta ignorando los estilos
+    width: 560px;
+    text-align: center;
+  }
+}

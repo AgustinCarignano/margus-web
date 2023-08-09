@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.card {
+  border-radius: 20px;
+  border: 6px solid $links;
+  width: 562px;
+  height: 464px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px;
+  img {
+    max-width: 410px;
+  }
+  h2{
+    text-align: right;
+  }
+}

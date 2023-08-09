@@ -10,7 +10,7 @@ function Footer() {
             <p>
                 Made with{" "}
                 <span>
-                    <Image src={heart} width={13} height={11} alt="" layout="responsive"/>
+                    <Image src={heart} width={13} height={11} alt="" />
                 </span>{" "}
                 <br />
                 Todos los derechos reservados
