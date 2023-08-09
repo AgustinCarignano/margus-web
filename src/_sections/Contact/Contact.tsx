@@ -11,13 +11,13 @@ function Contact() {
             <div>
                 <div>
                     <Link href={"#"}>
-                        <Image src={wsp} width={50} height={50} alt="whatsapp icon" layout="responsive"/>
+                        <Image src={wsp} width={50} height={50} alt="whatsapp icon" />
                     </Link>
                     <p>123 456 789</p>
                 </div>
                 <div>
                     <Link href={"#"}>
-                        <Image src={env} width={50} height={50} alt="email icon" layout="responsive"/>
+                        <Image src={env} width={50} height={50} alt="email icon" />
                     </Link>
                     <p>hello@mail.com</p>
                 </div>
