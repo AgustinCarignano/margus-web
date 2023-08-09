@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Styles from "./servicesCard.module.scss";
 
 type Props = {
     ImgSrc: string;
@@ -15,9 +16,9 @@ function ServicesCard({ ImgSrc, title, content, reverse }: Props) {
     return (
         <div style={{ display: "flex", flexDirection: `${reverse ? "row-reverse" : "row"}` }}>
             <Image src={ImgSrc} width={560} height={560} alt={title} layout="responsive"/>
-            <div>
-                <h2>{title}</h2>
-                <p>{content}</p>
+            <div className={Styles.cardContainer}>
+                <h2 className={Styles.cardContainer__title}>{title}</h2>
+                <p className={Styles.cardContainer__title}>{content}</p>
             </div>
         </div>
     );
