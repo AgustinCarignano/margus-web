@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.servicesSection {
+  padding: 94px 30px 0 30px;
+  &__title {
+    margin-bottom: 24px;
+    font-weight: bold;
+    background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__text {
+    margin-bottom: 40px;
+  }
+  &__cardsContainer {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+}
