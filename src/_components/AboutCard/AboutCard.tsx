@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Styles from "./aboutCard.module.scss";
+import handClick from "@public/images/handClick.svg";
 
 type Props = {
     ImgSrc: string;
@@ -20,7 +21,10 @@ function AboutCard({ ImgSrc, title, content }: Props) {
             ) : (
                 <div className={Styles.card__front}>
                     <Image src={ImgSrc} width={400} height={400} alt={title} layout="responsive" />
-                    <h2>{title}</h2>
+                    <Image src={handClick} width={80} height={80} alt="hand clic icon" className={Styles.card__front__icon} />
+                    <h2 aria-description={title}>
+                        <span>{title}</span>
+                    </h2>
                 </div>
             )}
         </div>

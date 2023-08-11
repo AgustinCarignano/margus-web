@@ -13,6 +13,7 @@
     }
     &__front {
         display: flex;
+        position: relative;
         opacity: 0;
         align-items: flex-end;
         justify-content: space-between;
@@ -22,6 +23,32 @@
         }
         h2 {
             text-align: right;
+        }
+        &__icon {
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            opacity: 0;
+            transition: opacity 0.3s 0.5s ease-in-out;
+            animation: click 1s linear 0s infinite;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -26px;
+            left: -26px;
+            width: calc(100% + 52px);
+            height: calc(100% + 52px);
+            border-radius: 20px;
+            background-color: rgba(62, 98, 112, 0.58);
+            opacity: 0;
+            transition: opacity 0.3s 0.5s ease-in-out;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
+        &:hover > &__icon {
+            opacity: 1;
         }
     }
     &__back {
@@ -38,10 +65,12 @@
             margin: 0 5px;
         }
     }
-    p[aria-description="AGUS"] > span {
+    p[aria-description="AGUS"] > span,
+    h2[aria-description="AGUS"] > span {
         color: #cfa508;
     }
-    p[aria-description="MARU"] > span {
+    p[aria-description="MARU"] > span,
+    h2[aria-description="MARU"] > span {
         color: #cf32ca;
     }
 }
@@ -60,5 +89,16 @@
     }
     to {
         opacity: 100;
+    }
+}
+@keyframes click {
+    0% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(30deg);
     }
 }
