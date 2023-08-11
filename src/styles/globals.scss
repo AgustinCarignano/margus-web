@@ -16,8 +16,7 @@ body {
 }
 
 body {
-    color: #3e6270;
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    color: $primary;
 }
 
 h1 {
@@ -53,4 +52,15 @@ header {
 }
 main {
     padding-top: 100px;
+}
+
+.theme-dark {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    header {
+        background-color: #1e1e1e;
+    }
+    .switch-btn {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 }
