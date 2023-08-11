@@ -1,24 +1,27 @@
 @import "../../styles/variables.scss";
 
 .ourWorksSection {
-  padding: 94px 30px 0 30px;
-  &__title {
-    margin-bottom: 24px;
-    font-weight: bold;
-    background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: fit-content;
-  }
-  &__text {
-    margin-bottom: 40px;
-  }
-  &__cardsContainer {
-    display: flex;
-    gap: 27px;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 40px; //es provisional hasta poder hacer el css de los botones
-  }
+    padding: 94px 30px 0 30px;
+    &__title {
+        margin-bottom: 24px;
+        font-weight: bold;
+        background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+    }
+    &__text {
+        margin-bottom: 40px;
+    }
+    &__cardsContainer {
+        display: flex;
+        gap: 27px;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 40px; //es provisional hasta poder hacer el css de los botones
+    }
+    &__buttons {
+        text-align: right;
+    }
 }
