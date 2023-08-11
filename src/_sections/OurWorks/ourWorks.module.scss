@@ -9,13 +9,16 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: fit-content;
   }
   &__text {
     margin-bottom: 40px;
   }
   &__cardsContainer {
     display: flex;
-    gap: 40px;
-    flex-direction: column;
+    gap: 27px;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px; //es provisional hasta poder hacer el css de los botones
   }
 }
