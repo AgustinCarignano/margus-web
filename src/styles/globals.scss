@@ -16,7 +16,7 @@ body {
 }
 
 body {
-    color: #3E6270;
+    color: #3e6270;
     background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
@@ -49,8 +49,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 main {
     padding-top: 100px;
 }
-

@@ -1,18 +1,64 @@
 @import "../../styles/variables.scss";
 
 .card {
-  border-radius: 20px;
-  border: 6px solid $links;
-  width: 562px;
-  height: 464px;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  padding: 20px;
-  img {
-    max-width: 410px;
-  }
-  h2{
-    text-align: right;
-  }
+    border: 6px solid $links;
+    border-radius: 20px;
+    width: 562px;
+    height: 464px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    &__rotate {
+        transform: rotateY(180deg);
+    }
+    &__front {
+        display: flex;
+        opacity: 0;
+        align-items: flex-end;
+        justify-content: space-between;
+        animation: show_front 0.2s linear 0.1s forwards;
+        img {
+            max-width: 410px;
+        }
+        h2 {
+            text-align: right;
+        }
+    }
+    &__back {
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        animation: show_back 0.2s linear 0.1s forwards;
+    }
+    p {
+        text-align: center;
+        transform: rotateY(180deg);
+        & span {
+            margin: 0 5px;
+        }
+    }
+    p[aria-description="AGUS"] > span {
+        color: #cfa508;
+    }
+    p[aria-description="MARU"] > span {
+        color: #cf32ca;
+    }
+}
+
+@keyframes show_front {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+@keyframes show_back {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
 }
