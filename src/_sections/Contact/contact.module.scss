@@ -1,46 +1,46 @@
 @import "../../styles/variables.scss";
 
 .contactSection {
-  padding: 94px 30px 0 30px;
-  margin-bottom: 38px;
-  &__title {
-    margin-bottom: 24px;
-    font-weight: bold;
-    background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: fit-content;
-  }
-  &__text {
-    margin-bottom: 40px;
-  }
-  &__content {
-    display: flex;
-    justify-content: center;
-    gap: 168px;
-    &__left {
-      img {
-        max-width: 443px;
-      }
+    padding: 94px 30px 0 30px;
+    margin-bottom: 38px;
+    &__title {
+        margin-bottom: 24px;
+        font-weight: bold;
+        background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
     }
-    &__right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 30px;
-      &__item {
+    &__text {
+        margin-bottom: 40px;
+    }
+    &__content {
         display: flex;
-        gap: 20px;
-        align-items: center;
-      }
+        justify-content: center;
+        gap: 168px;
+        &__left {
+            img {
+                max-width: 443px;
+            }
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            &__item {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+        }
     }
-  }
-  &__cardsContainer {
-    display: flex;
-    gap: 27px;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 40px; //es provisional hasta poder hacer el css de los botones
-  }
+    &__cardsContainer {
+        display: flex;
+        gap: 27px;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 40px; //es provisional hasta poder hacer el css de los botones
+    }
 }

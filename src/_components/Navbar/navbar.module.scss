@@ -54,7 +54,7 @@
             height: 20px;
             padding: 5px 6px;
             border-radius: 35px;
-            transition: all linear 0.3s;
+            transition: translate linear 0.3s;
             cursor: pointer;
             &:before {
                 content: "";
