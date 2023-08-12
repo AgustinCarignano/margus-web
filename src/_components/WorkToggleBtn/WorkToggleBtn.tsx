@@ -1,5 +1,5 @@
 "use client";
-
+import Styles from "./workToggleBtn.module.scss";
 import React, { useState } from "react";
 
 type Options = "web" | "design";
@@ -9,11 +9,15 @@ function WorkToggleBtn({ className }: { className: string }) {
     function handleClick(option: Options) {
         setActive(option);
     }
-    console.log(active);
+
     return (
         <div className={className}>
-            <button onClick={() => handleClick("web")}>WEB</button>
-            <button onClick={() => handleClick("design")}>DESIGN</button>
+            <button className={`${Styles.button} ${Styles.button__left} ${active === "web" ? Styles.button__active : ""}`} onClick={() => handleClick("web")}>
+                WEB
+            </button>
+            <button className={`${Styles.button} ${Styles.button__right} ${active === "design" ? Styles.button__active : ""}`} onClick={() => handleClick("design")}>
+                DESIGN
+            </button>
         </div>
     );
 }

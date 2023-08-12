@@ -28,10 +28,14 @@
         align-items: center;
         &__link {
             color: $links;
+            transition: all 0.2s;
             & > a {
                 font-size: 1.6rem;
             }
             &:hover {
+                color: $callToAction;
+            }
+            &[data-active="true"] {
                 color: $callToAction;
             }
         }
@@ -73,11 +77,12 @@
         }
         &__lang {
             font-size: 1.6rem;
+            transition: all 0.2s;
             color: $links;
             &:hover {
                 color: $callToAction;
             }
-            &:active {
+            &[data-active="true"] {
                 color: $callToAction;
             }
         }

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Styles from "./home.module.scss";
-import Utils from "../../styles/utils.module.scss"
-
+import Utils from "../../styles/utils.module.scss";
 
 function Home() {
     return (
@@ -16,4 +15,3 @@ function Home() {
 }
 
 export default Home;
- 
