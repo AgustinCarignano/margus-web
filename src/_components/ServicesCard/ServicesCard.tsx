@@ -18,7 +18,7 @@ function ServicesCard({ ImgSrc, title, content, reverse }: Props) {
             <Image src={ImgSrc} width={560} height={560} alt={title} layout="responsive" />
             <div className={Styles.card__container}>
                 <h2 className={Styles.card__container__title}>{title}</h2>
-                <p className={Styles.card__container__title}>{content}</p>
+                <p className={Styles.card__container__text}>{content}</p>
             </div>
         </div>
     );
