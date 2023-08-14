@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .card {
     display: flex;
     gap: 24px;
@@ -16,6 +18,7 @@
         &__title {
             text-align: center;
             margin-bottom: 24px;
+            color: $links;
         }
         &__text {
             text-align: center;
