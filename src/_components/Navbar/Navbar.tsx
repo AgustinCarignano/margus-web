@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useReducer } from "react";
+import { Trans } from "react-i18next/TransWithoutContext";
+import { languages } from "@src/i18n/settings";
+import { useTranslation } from "@src/i18n";
 import Styles from "./navbar.module.scss";
 import Image from "next/image";
 import moon from "@src/../public/images/moonIcon.svg";
@@ -13,10 +16,10 @@ const reducer = (state: boolean) => {
     return !state;
 };
 
-function Navbar() {
+function Navbar({ lng }: { lng: string }) {
     const [lightTheme, dispatch] = useReducer(reducer, true);
     const [active, setActive] = useState("");
-    const [activeLang, setActiveLang] = useState("ES");
+    // const [activeLang, setActiveLang] = useState("ES");
 
     const links = ["About", "Services", "Work", "Contact"];
     const switchPosition = lightTheme ? "15px" : "0px";
@@ -42,11 +45,11 @@ function Navbar() {
                         </span>
                         <Image src={sun} width={12} alt="sun icon" />
                     </div>
-                    <span className={Styles.navbar__icons__lang} data-active={activeLang === "ES"} onClick={() => setActiveLang("ES")}>
-                        ES
+                    <span className={Styles.navbar__icons__lang} data-active={lng === "es"}>
+                        <Link href="/es">ES</Link>
                     </span>
-                    <span className={Styles.navbar__icons__lang} data-active={activeLang === "EN"} onClick={() => setActiveLang("EN")}>
-                        EN
+                    <span className={Styles.navbar__icons__lang} data-active={lng === "en"}>
+                        <Link href="/en">EN</Link>
                     </span>
                 </div>
             </div>
@@ -55,3 +58,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+//  onClick={() => setActiveLang("ES")}
+//  onClick={() => setActiveLang("EN")}

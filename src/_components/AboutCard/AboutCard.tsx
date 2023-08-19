@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Styles from "./aboutCard.module.scss";
 import handClick from "@public/images/handClick.svg";
 
 type Props = {
-    ImgSrc: string;
+    ImgSrc: string | StaticImageData;
     title: string;
     content: string | React.JSX.Element;
 };
@@ -13,14 +13,18 @@ type Props = {
 function AboutCard({ ImgSrc, title, content }: Props) {
     const [turned, setTurned] = useState(false);
     return (
-        <div className={`${Styles.card} ${turned && Styles.card__rotate}`} onClick={() => setTurned((prev) => !prev)} onMouseLeave={() => setTurned(false)}>
+        <div
+            className={`${Styles.card} ${turned && Styles.card__rotate}`}
+            onClick={() => setTurned((prev) => !prev)}
+            onMouseLeave={() => setTurned(false)}
+        >
             {turned ? (
                 <div className={Styles.card__back}>
                     <p aria-description={title}>{content}</p>
                 </div>
             ) : (
                 <div className={Styles.card__front}>
-                    <Image src={ImgSrc} width={400} height={400} alt={title} layout="responsive" />
+                    <Image src={ImgSrc} width={400} height={400} alt={title} className={Styles.card__front__img} />
                     <Image src={handClick} width={80} height={80} alt="hand clic icon" className={Styles.card__front__icon} />
                     <h2 aria-description={title}>
                         <span>{title}</span>
