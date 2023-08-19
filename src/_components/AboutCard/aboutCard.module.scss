@@ -18,7 +18,9 @@
         align-items: flex-end;
         justify-content: space-between;
         animation: show_front 0.2s linear 0.1s forwards;
-        img {
+        &__img {
+            width: 100%;
+            height: auto;
             max-width: 410px;
         }
         h2 {

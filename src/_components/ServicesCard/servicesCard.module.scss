@@ -7,8 +7,10 @@
     max-width: 1150px;
     margin: 0 auto;
     align-items: center;
-    & > img {
+    &__img {
         flex: 1 1 0;
+        width: 50%;
+        height: auto;
     }
     &__reverse {
         flex-direction: row-reverse;
