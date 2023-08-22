@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Styles from "./home.module.scss";
 import Utils from "../../styles/utils.module.scss";
-import homeImage from "@public/images/homeImage4.png";
+import homeImage from "@public/images/homeImage5.png";
 
 function Home({ option }: { option: string }) {
     return (
