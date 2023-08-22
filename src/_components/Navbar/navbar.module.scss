@@ -2,11 +2,14 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px 30px;
     max-width: 1440px;
     margin: 0 auto;
+    @media (min-width: 720px) {
+        justify-content: space-between;
+    }
     &__logo {
         font-size: 3.5rem;
         font-weight: bold;
@@ -22,10 +25,13 @@
         gap: 240px;
     }
     &__links {
-        display: flex;
+        display: none;
         justify-content: space-between;
         gap: 30px;
         align-items: center;
+        @media (min-width: 720px) {
+            display: flex;
+        }
         &__link {
             color: $links;
             transition: all 0.2s;
@@ -41,8 +47,11 @@
         }
     }
     &__icons {
-        display: flex;
+        display: none;
         gap: 7px;
+        @media (min-width: 720px) {
+            display: flex;
+        }
         &__switchOptions {
             display: flex;
             gap: 4px;

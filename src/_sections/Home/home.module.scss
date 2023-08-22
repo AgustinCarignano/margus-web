@@ -1,32 +1,40 @@
 @import "../../styles/variables.scss";
 
 .homeSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 16px 0 16px;
+  @media (min-width: 720px) {
+    flex-direction: row;
     padding: 110px 30px 0 30px;
-    flex-direction: column;
+    gap: 25px;
+  }
+  h1 {
+    max-width: 558px;
+    text-align: center;
+
     @media (min-width: 720px) {
-        flex-direction: row;
+      width: 55%;
+      padding: 50px;
+      font-size: 3.2rem;
     }
-    h1 {
-        max-width: 558px;
-        padding: 50px;
-        text-align: center;
-        @media (min-width: 720px) {
-            width: 55%;
-        }
+  }
+  div {
+    display: flex;
+    max-width: 446px;
+    @media (min-width: 720px) {
+      width: 45%;
     }
-    div {
-        display: flex;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 253px;
+    @media (min-width: 720px) {
         max-width: 446px;
-        @media (min-width: 720px) {
-            width: 45%;
-        }
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
+      }
+  }
 }

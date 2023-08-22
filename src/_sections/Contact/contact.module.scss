@@ -1,46 +1,71 @@
 @import "../../styles/variables.scss";
 
 .contactSection {
+  padding: 70px 16px 0 16px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 720px) {
     padding: 94px 30px 0 30px;
     margin-bottom: 38px;
-    &__title {
-        margin-bottom: 24px;
-        font-weight: bold;
-        background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        width: fit-content;
+  }
+  &__title {
+    margin-bottom: 35px;
+    font-weight: bold;
+    background: linear-gradient(105deg, $callToAction 0%, $secondary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    @media (min-width: 720px) {
+      margin-bottom: 24px;
     }
-    &__text {
-        margin-bottom: 40px;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-direction: column-reverse;
+    @media (min-width: 720px) {
+      flex-direction: row;
+      gap: 168px;
     }
-    &__content {
-        display: flex;
-        justify-content: center;
-        gap: 168px;
-        &__left {
-            img {
-                max-width: 443px;
-            }
+    &__left {
+      img {
+        width: 100%;
+        max-width: 265px;
+        height: auto;
+        @media (min-width: 720px) {
+          max-width: 443px;
         }
-        &__right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-            &__item {
-                display: flex;
-                gap: 20px;
-                align-items: center;
-            }
-        }
+      }
     }
-    &__cardsContainer {
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      &__item {
         display: flex;
-        gap: 27px;
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 40px; //es provisional hasta poder hacer el css de los botones
+        gap: 0px;
+        align-items: center;
+        flex-direction: column;
+        a img {
+          width: 30px;
+        }
+        @media (min-width: 720px) {
+          flex-direction: row;
+          gap: 20px;
+        }
+      }
     }
+  }
+  &__cardsContainer {
+    display: flex;
+    gap: 27px;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px; //es provisional hasta poder hacer el css de los botones
+  }
 }

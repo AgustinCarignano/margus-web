@@ -1,110 +1,123 @@
 @import "../../styles/variables.scss";
 
 .card {
-    border: 6px solid $links;
-    border-radius: 20px;
-    width: 562px;
-    height: 464px;
-    padding: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    &__rotate {
-        transform: rotateY(180deg);
+  border: 3px solid $links;
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 1.2333;
+  max-width: 342px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  @media (min-width: 720px) {
+    width: 100%;
+    max-width: 562px;
+    border: 3px solid $links;
+  }
+  &__rotate {
+    transform: rotateY(180deg);
+  }
+  &__front {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    align-items: flex-end;
+    justify-content: space-between;
+    animation: show_front 0.2s linear 0.1s forwards;
+    &__img {
+      width: 100%;
+      height: auto;
+      max-width: 410px;
     }
-    &__front {
-        display: flex;
-        position: relative;
-        opacity: 0;
-        align-items: flex-end;
-        justify-content: space-between;
-        animation: show_front 0.2s linear 0.1s forwards;
-        &__img {
-            width: 100%;
-            height: auto;
-            max-width: 410px;
-        }
-        h2 {
-            text-align: right;
-        }
-        &__icon {
-            position: absolute;
-            bottom: 100px;
-            right: 100px;
-            opacity: 0;
-            transition: opacity 0.3s 0.5s ease-in-out;
-            transform-origin: 100% 50%;
-            animation: click 0.8s linear 0s infinite;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            top: -26px;
-            left: -26px;
-            width: calc(100% + 52px);
-            height: calc(100% + 52px);
-            border-radius: 20px;
-            background-color: rgba(62, 98, 112, 0.58);
-            opacity: 0;
-            transition: opacity 0.3s 0.5s ease-in-out;
-        }
-        &:hover::before {
-            opacity: 1;
-        }
-        &:hover > &__icon {
-            opacity: 1;
-        }
+    h2 {
+      text-align: right;
+      @media (min-width: 720px) {
+        font-size: 3.2rem;
+      }
     }
-    &__back {
-        height: 100%;
-        opacity: 0;
-        display: flex;
-        align-items: center;
-        animation: show_back 0.2s linear 0.1s forwards;
+    &__icon {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      opacity: 0;
+      transition: opacity 0.3s 0.5s ease-in-out;
+      transform-origin: 100% 50%;
+      animation: click 0.8s linear 0s infinite;
+      @media (min-width: 720px) {
+        bottom: 100px;
+        right: 100px;
+      }
     }
-    p {
-        text-align: center;
-        transform: rotateY(180deg);
-        & span {
-            margin: 0 5px;
-        }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -26px;
+      left: -26px;
+      width: calc(100% + 52px);
+      height: calc(100% + 52px);
+      border-radius: 20px;
+      background-color: rgba(62, 98, 112, 0.58);
+      opacity: 0;
+      transition: opacity 0.3s 0.5s ease-in-out;
     }
-    p[aria-description="AGUS"] > span,
-    h2[aria-description="AGUS"] > span {
-        color: #cfa508;
+    &:hover::before {
+      opacity: 1;
     }
-    p[aria-description="MARU"] > span,
-    h2[aria-description="MARU"] > span {
-        color: #cf32ca;
+    &:hover > &__icon {
+      opacity: 1;
     }
+  }
+  &__back {
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    animation: show_back 0.2s linear 0.1s forwards;
+  }
+  p {
+    text-align: center;
+    transform: rotateY(180deg);
+    & span {
+      margin: 0 5px;
+    }
+  }
+  p[aria-description="AGUS"] > span,
+  h2[aria-description="AGUS"] > span {
+    color: #cfa508;
+  }
+  p[aria-description="MARU"] > span,
+  h2[aria-description="MARU"] > span {
+    color: #cf32ca;
+  }
 }
 
 @keyframes show_front {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 @keyframes show_back {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 @keyframes click {
-    0% {
-        transform: rotateY(0deg) rotateX(0deg);
-    }
-    50% {
-        transform: rotateY(20deg) rotateX(-15deg);
-    }
-    // 80% {
-    //     transform: scale(1.2);
-    // }
-    100% {
-        transform: rotateY(0deg) rotateX(0deg);
-    }
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(20deg) rotateX(-15deg);
+  }
+  // 80% {
+  //     transform: scale(1.2);
+  // }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
 }
