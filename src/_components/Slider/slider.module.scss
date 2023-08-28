@@ -1,0 +1,19 @@
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+    @media (min-width: 1000px) {
+        max-width: 1380px;
+    }
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    @media (min-width: 1000px) {
+        display: none;
+    }
+    & > span {
+        background-color: #cf32ca;
+    }
+}

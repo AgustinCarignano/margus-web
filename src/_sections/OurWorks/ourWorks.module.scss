@@ -7,7 +7,7 @@
     align-items: center;
     @media (min-width: 720px) {
         padding: 94px 30px 0 30px;
-      }
+    }
     &__title {
         margin-bottom: 24px;
         font-weight: bold;
@@ -25,9 +25,15 @@
         gap: 27px;
         flex-direction: row;
         justify-content: center;
-        padding-top: 40px; //es provisional hasta poder hacer el css de los botones
+        width: 100%;
+        max-width: 1380px;
     }
     &__buttons {
         text-align: right;
+        margin-bottom: 30px;
+        @media (min-width: 1000px) {
+            margin-bottom: 40px;
+            margin-left: auto;
+        }
     }
 }

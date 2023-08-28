@@ -5,6 +5,8 @@ import Styles from "./ourWorks.module.scss";
 import imgWork1 from "../../../public/images/work1.png";
 import imgWork2 from "../../../public/images/work1.png";
 import imgWork3 from "../../../public/images/work1.png";
+import Image from "next/image";
+import Slider from "@src/_components/Slider/Slider";
 
 function OurWorks() {
     const works = [
@@ -17,9 +19,11 @@ function OurWorks() {
             <h2 className={Styles.ourWorksSection__title}>OUR WORKS</h2>
             <WorkToggleBtn className={Styles.ourWorksSection__buttons} />
             <div className={Styles.ourWorksSection__cardsContainer}>
-                {works.map((w, i) => (
-                    <WorkCard key={i} title={w.title} text={w.text} img={w.img} />
-                ))}
+                <Slider>
+                    {works.map((w, i) => (
+                        <WorkCard key={i} title={w.title} text={w.text} img={w.img} />
+                    ))}
+                </Slider>
             </div>
         </section>
     );
