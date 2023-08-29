@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .contactSection {
-    padding: 70px 16px 0 16px;
+    padding: 90px 16px 0 16px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@
     @media (min-width: 720px) {
         padding: 94px 30px 0 30px;
         margin-bottom: 38px;
+        align-items: start;
     }
     &__title {
         margin-bottom: 35px;
@@ -30,6 +31,7 @@
         @media (min-width: 720px) {
             flex-direction: row;
             gap: 168px;
+            margin: auto;
         }
         &__left {
             img {
