@@ -12,12 +12,12 @@ function Home({ option }: { option: string }) {
             </div>
             {option === "es" ? (
                 <h1>
-                    Bienvenido a Margus! <br></br> Somos creadores y diseñamos tu <span className={Utils.highlightedText__fucsia}>página web</span> y{" "}
+                    Hola! 👋🏻 <br></br>Te damos la bienvenida. <br></br> Somos creadores y diseñamos <br></br>tu <span className={Utils.highlightedText__fucsia}>página web</span> y{" "}
                     <span className={Utils.highlightedText__aqua}>logo</span> pensados especialmente para vos
                 </h1>
             ) : (
                 <h1>
-                    Welcome to Margus! <br></br> We are ... <span className={Utils.highlightedText__fucsia}>página web</span> y{" "}
+                    Welcome 👋🏻 <br></br> We are ... <span className={Utils.highlightedText__fucsia}>página web</span> y{" "}
                     <span className={Utils.highlightedText__aqua}>logo</span> pensados especialmente para vos
                 </h1>
             )}
