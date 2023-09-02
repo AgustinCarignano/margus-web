@@ -1,39 +1,18 @@
 "use client";
 
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "./navbar.module.scss";
 import Image from "next/image";
 import moon from "@src/../public/images/moonIcon.svg";
 import sun from "@src/../public/images/sunIcon.svg";
 import doot from "@src/../public/images/switchIcon.svg";
 import Link from "next/link";
-
-const reducer = (state: boolean) => {
-    const theme = {
-        light: {
-            background: "#ffffff",
-            text: "#3e6270",
-            links: "#058271",
-        },
-        dark: {
-            background: "#223f4a",
-            text: "#ffffff",
-            links: "#1cceb5",
-        },
-    };
-    const themeSelected = !state ? "light" : "dark";
-    // document.querySelector("body")?.classList.toggle("theme-dark");
-    document.querySelector("body")?.style.setProperty("--bg-color", theme[themeSelected].background);
-    document.querySelector("body")?.style.setProperty("--text-color", theme[themeSelected].text);
-    document.querySelector("body")?.style.setProperty("--links-color", theme[themeSelected].links);
-    return !state;
-};
+import { getThemePreference, setThemeColors } from "@src/_utils/theme.utils";
 
 function Navbar({ lng }: { lng: string }) {
-    const [lightTheme, dispatch] = useReducer(reducer, true);
+    const [lightTheme, setLightTheme] = useState(getThemePreference());
     const [active, setActive] = useState("");
     const [visible, setVisible] = useState(false);
-    // const [activeLang, setActiveLang] = useState("ES");
 
     const links = ["About", "Services", "Work", "Contact"];
     const switchPosition = lightTheme ? "15px" : "0px";
@@ -45,6 +24,11 @@ function Navbar({ lng }: { lng: string }) {
         window.addEventListener("resize", listener);
         return () => window.removeEventListener("resize", listener);
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem("themePreference", lightTheme ? "light" : "dark");
+        setThemeColors(lightTheme ? "light" : "dark");
+    }, [lightTheme]);
 
     return (
         <nav className={Styles.navbar} id="navbar">
@@ -76,7 +60,7 @@ function Navbar({ lng }: { lng: string }) {
                 <div className={Styles.navbar__icons}>
                     <div className={Styles.navbar__icons__switchOptions}>
                         <Image src={moon} width={12} alt="moon icon" />
-                        <span className={Styles.navbar__icons__switchButton} onClick={dispatch}>
+                        <span className={Styles.navbar__icons__switchButton} onClick={() => setLightTheme((prev) => !prev)}>
                             <Image style={{ transform: `translate(${switchPosition})` }} src={doot} width={12} alt="doot icon" />
                         </span>
                         <Image src={sun} width={12} alt="sun icon" />

@@ -36,7 +36,7 @@ export default function RootLayout({ children, params: { lng } }: LayoutType) {
                     <Navbar lng={lng} />
                 </header>
                 <main>{children}</main>
-                <Footer />
+                <Footer lng={lng} />
             </body>
         </html>
     );

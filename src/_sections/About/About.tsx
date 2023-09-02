@@ -1,28 +1,22 @@
 import AboutCard from "@src/_components/AboutCard/AboutCard";
 import React from "react";
+import Link from "next/link";
+import { useTranslation } from "@src/i18n";
 import Styles from "./about.module.scss";
 import aguCard from "@public/images/aguCard4.svg";
 import maruCard from "@public/images/maruCard3.png";
 
-async function About({ text }: { text: string }) {
-    const maruCardContent = (
-        <>
-            Hola! Soy<span>Maru</span>🙋🏻‍♀️, creadora por naturaleza. Soy
-            <span>diseñadora UX/UI</span>y programadora<span>FrontEnd</span>.Soy una
-            <span>apasionada</span>por los<span>detalles</span>creo que marcan la diferencia. Amo hacer deporte y la naturaleza. Siempre me vas a
-            encontrar creando, en cualquier ámbito de la vida.
-        </>
-    );
-    const agusCardContent = (
-        <>
-            Hola! Soy <span>Agus</span>, y soy <span>desarrollador Web Full Stack</span>. Me encanta crear sitios web atractivos, fáciles de usar y
-            técnicamente eficientes. <span>Analítico y perfeccionista</span> incurable, siempre aprendiendo algo nuevo para mejorar mis habilidades.
-        </>
-    );
+async function About({ lng }: { lng: string }) {
+    const { t } = await useTranslation(lng, "translation");
+    const maruCardContent = <p aria-description="MARU" dangerouslySetInnerHTML={{ __html: t("about_card_maru") }}></p>;
+    const agusCardContent = <p aria-description="AGUS" dangerouslySetInnerHTML={{ __html: t("about_card_agus") }}></p>;
     return (
         <section className={Styles.aboutSection} id="about">
-            <h2 className={Styles.aboutSection__title}>ABOUT US</h2>
-            <p className={Styles.aboutSection__text}>{text}</p>
+            <h2 className={Styles.aboutSection__title}>{t("about_title").toUpperCase()}</h2>
+            <p className={Styles.aboutSection__text} dangerouslySetInnerHTML={{ __html: t("about_text") }}></p>
+            <Link className={Styles.aboutSection__link} href="#contact">
+                {t("about_link")}
+            </Link>
             <div className={Styles.aboutSection__cardsContainer}>
                 <AboutCard title="MARU" ImgSrc={maruCard} content={maruCardContent} />
                 <AboutCard title="AGUS" ImgSrc={aguCard} content={agusCardContent} />

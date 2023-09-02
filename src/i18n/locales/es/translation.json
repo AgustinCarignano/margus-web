@@ -1,11 +1,24 @@
 {
-  "about": "En Margus, somos un equipo apasionado de profesionales que crean y desarrollan soluciones a medida para impulsar el éxito en el mundo digital. Convertimos ideas en experiencias cautivadoras y funcionales que reflejan la esencia única de cada proyecto tejiendo la identidad en cada detalle, desde píxeles hasta líneas de código. Nuestra satisfacción radica en el éxito y la relación sólida que construimos contigo. Estamos listos para ser parte de tu viaje hacia la excelencia digital.",
-  "about_link": "¡Únete a nosotros y transforma tus ideas en realidad!",
-  "services": "En Margus, estamos dedicados a brindarte una gama completa de servicios diseñados para satisfacer tus necesidades digitales. A continuación, te presentamos algunos de los trabajos que realizamos, pero no dudes en contactarnos si lo que estás buscando no encaja exactamente con lo descrito. Estamos seguros de que podemos encontrar la solución perfecta para ti.",
-  "title_1": "Rediseño y asesoramiento para optimización de páginas web existentes",
-  "text_1": "Transformamos tu página web existente en una experiencia digital moderna y eficiente, para alcanzar tus metas y objetivos comerciales. Ya sea que necesites una actualización visual, una mejor navegación o una mayor velocidad de carga, nos comprometemos a encontrar la solución que mejor se adapte a ti.",
-  "title_2": "Diseño y desarrollo de páginas web a medida",
-  "text_2": "Creamos soluciones digitales únicas y adaptadas a tus necesidades. Estamos capacitados para convertir, desde el diseño estético hasta la funcionalidad intuitiva, tus ideas en realidad, enfocándonos en cada detalle.",
-  "title_3": "Diseño y creación de logo",
-  "text_3": "Le damos vida a la identidad visual de tu marca. Sabemos que un logo es mucho más que una imagen, es la expresión visual de tus valores y esencia. Desde colores y tipografía hasta forma y estilo, cada detalle se diseña con un propósito. Confía en nosotros para crear un logo que hable de tu negocio en voz alta, dejando una huella perdurable en la mente de tus clientes."
+    "prueba_simple": "texto de entrada simple",
+    "prueba_anidada": {
+        "anidado_1": "primer texto anidado",
+        "anidado_2": "segundo texto anidado"
+    },
+    "about_title": "Quienes somos",
+    "about_text": "<span class=\"remark-callToAction\">En Margus</span>, somos un equipo apasionado de profesionales que crean y desarrollan soluciones a medida para impulsar el éxito en el mundo digital. Convertimos ideas en experiencias cautivadoras y funcionales que reflejan la esencia única de cada proyecto tejiendo la identidad en cada detalle, desde píxeles hasta líneas de código. Nuestra satisfacción radica en el éxito y la relación sólida que construimos contigo. Estamos listos para ser parte de tu viaje hacia la excelencia digital.",
+    "about_link": "¡Únete a nosotros y transforma tus ideas en realidad!",
+    "about_card_maru": "Hola! Soy<span>Maru</span>🙋🏻‍♀️, creadora por naturaleza. Soy <span>diseñadora UX/UI</span>y programadora<span>FrontEnd</span>.Soy una <span>apasionada</span>por los<span>detalles</span>creo que marcan la diferencia. Amo hacer deporte y la naturaleza. Siempre me vas a encontrar creando, en cualquier ámbito de la vida.",
+    "about_card_agus": "Hola! Soy <span>Agus</span>, y soy <span>desarrollador Web Full Stack</span>. Me encanta crear sitios web atractivos, fáciles de usar y técnicamente eficientes. <span>Analítico y perfeccionista</span> incurable, siempre aprendiendo algo nuevo para mejorar mis habilidades.",
+    "services_title": "Servicios",
+    "services_text": "En Margus, estamos dedicados a brindarte una gama completa de servicios diseñados para satisfacer tus necesidades digitales. A continuación, te presentamos algunos de los trabajos que realizamos, pero no dudes en contactarnos si lo que estás buscando no encaja exactamente con lo descrito. Estamos seguros de que podemos encontrar la solución perfecta para ti.",
+    "services_card_title_1": "Rediseño y asesoramiento para optimización de páginas web existentes",
+    "services_card_text_1": "Transformamos tu página web existente en una experiencia digital moderna y eficiente, para alcanzar tus metas y objetivos comerciales. Ya sea que necesites una actualización visual, una mejor navegación o una mayor velocidad de carga, nos comprometemos a encontrar la solución que mejor se adapte a ti.",
+    "services_card_title_2": "Diseño y desarrollo de páginas web a medida",
+    "services_card_text_2": "Creamos soluciones digitales únicas y adaptadas a tus necesidades. Estamos capacitados para convertir, desde el diseño estético hasta la funcionalidad intuitiva, tus ideas en realidad, enfocándonos en cada detalle.",
+    "services_card_title_3": "Diseño y creación de logo",
+    "services_card_text_3": "Le damos vida a la identidad visual de tu marca. Sabemos que un logo es mucho más que una imagen, es la expresión visual de tus valores y esencia. Desde colores y tipografía hasta forma y estilo, cada detalle se diseña con un propósito. Confía en nosotros para crear un logo que hable de tu negocio en voz alta, dejando una huella perdurable en la mente de tus clientes.",
+    "works_title": "Nuestros trabajos",
+    "contact_title": "contacto",
+    "footer_thanks": "<span class=\"remark-callToAction\">Gracias</span> por visitar nuestra página, <br />esperamos volver a <span class=\"remark-links\">verte pronto!</span>",
+    "footer_rights": "Todos los derechos reservados"
 }

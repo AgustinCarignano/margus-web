@@ -20,9 +20,7 @@ function AboutCard({ ImgSrc, title, content }: Props) {
             onMouseLeave={() => setTurned(false)}
         >
             {turned ? (
-                <div className={Styles.card__back}>
-                    <p aria-description={title}>{content}</p>
-                </div>
+                <div className={Styles.card__back}>{content}</div>
             ) : (
                 <div className={Styles.card__front}>
                     <Image src={ImgSrc} width={400} height={400} alt={title} className={Styles.card__front__img} />
