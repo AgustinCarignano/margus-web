@@ -19,11 +19,17 @@
         width: fit-content;
     }
     &__text {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         text-align: center;
         @media (min-width: 720px) {
             text-align: start;
         }
+    }
+    &__link {
+        margin-bottom: 40px;
+        font-size: 2rem;
+        text-decoration: underline;
+        color: $callToAction;
     }
     &__cardsContainer {
         display: grid;

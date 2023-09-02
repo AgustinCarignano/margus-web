@@ -78,17 +78,13 @@ main {
     max-width: 1440px;
     margin: 0 auto;
 }
-// .switch-btn {
-//     background-color: var(--bg-color);
-// }
 
-// .theme-dark {
-//     background-color: #223f4a;
-//     color: white;
-//     header {
-//         background-color: #0d2129;
-//     }
-//     .switch-btn {
-//         background-color: #0d2129;
-//     }
-// }
+.remark-callToAction {
+    color: $callToAction;
+}
+.remark-details {
+    color: $details;
+}
+.remark-links {
+    color: $links;
+}

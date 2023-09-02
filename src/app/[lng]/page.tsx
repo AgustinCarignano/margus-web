@@ -13,10 +13,10 @@ export default async function MainPage({ params: { lng } }: PropsType) {
     return (
         <div>
             <HomePage option={lng} />
-            <AboutPage text={t("about")} />
-            <ServicesPage />
-            <OurWorksPage />
-            <Contact />
+            <AboutPage lng={lng} />
+            <ServicesPage lng={lng} />
+            <OurWorksPage title={t("works_title")} />
+            <Contact title={t("contact_title")} />
         </div>
     );
 }

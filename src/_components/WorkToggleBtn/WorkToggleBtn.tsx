@@ -1,21 +1,27 @@
 "use client";
+import { WorkOptions } from "@src/_sections/OurWorks/OurWorks";
 import Styles from "./workToggleBtn.module.scss";
-import React, { useState } from "react";
+import React from "react";
 
-type Options = "web" | "design";
+type Props = {
+    className: string;
+    active: any;
+    setActive: (options: WorkOptions) => void;
+};
 
-function WorkToggleBtn({ className }: { className: string }) {
-    const [active, setActive] = useState<Options>("web");
-    function handleClick(option: Options) {
-        setActive(option);
-    }
-
+function WorkToggleBtn({ className, active, setActive }: Props) {
     return (
         <div className={className}>
-            <button className={`${Styles.button} ${Styles.button__left} ${active === "web" ? Styles.button__active : ""}`} onClick={() => handleClick("web")}>
+            <button
+                className={`${Styles.button} ${Styles.button__left} ${active === "web" ? Styles.button__active : ""}`}
+                onClick={() => setActive("web")}
+            >
                 WEB
             </button>
-            <button className={`${Styles.button} ${Styles.button__right} ${active === "design" ? Styles.button__active : ""}`} onClick={() => handleClick("design")}>
+            <button
+                className={`${Styles.button} ${Styles.button__right} ${active === "design" ? Styles.button__active : ""}`}
+                onClick={() => setActive("design")}
+            >
                 DESIGN
             </button>
         </div>
