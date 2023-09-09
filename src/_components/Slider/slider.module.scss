@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     max-width: 400px;
+    position: relative;
     @media (min-width: 1000px) {
         max-width: 1380px;
     }
@@ -15,5 +16,37 @@
     }
     & > span {
         background-color: #cf32ca;
+    }
+}
+
+.controls {
+    display: none;
+    @media (min-width: 1000px) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        cursor: pointer;
+        &:active {
+            transform: scale(0.8);
+        }
+        &__inactive {
+            opacity: 0.5;
+            &:active {
+                transform: none;
+            }
+        }
+        & > img {
+            width: 100%;
+        }
+        &__prev {
+            translate: -100% -50%;
+            left: 0;
+            rotate: 180deg;
+        }
+        &__next {
+            translate: 100% -50%;
+            right: 0;
+        }
     }
 }
