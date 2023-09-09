@@ -1,22 +1,22 @@
 @import "../../styles/variables.scss";
 
 .footer {
-  padding: 50px 60px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 75px;
-  box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-  @media (min-width: 720px) {
-    flex-direction: row;
-    padding: 33px;
-    gap: 444px;
-  }
-  &__title {
-    text-align: center;
-  }
-  &__text {
-    text-align: center;
-  }
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        padding: 33px;
+        gap: 444px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__text {
+        text-align: center;
+    }
 }

@@ -10,7 +10,7 @@ import Link from "next/link";
 import { getThemePreference, setThemeColors } from "@src/_utils/theme.utils";
 
 function Navbar({ lng }: { lng: string }) {
-    const [lightTheme, setLightTheme] = useState(getThemePreference());
+    const [lightTheme, setLightTheme] = useState(true);
     const [active, setActive] = useState("");
     const [visible, setVisible] = useState(false);
 
@@ -18,6 +18,7 @@ function Navbar({ lng }: { lng: string }) {
     const switchPosition = lightTheme ? "15px" : "0px";
 
     useEffect(() => {
+        setLightTheme(getThemePreference());
         const listener = () => {
             setVisible(false);
         };
