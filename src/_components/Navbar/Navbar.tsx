@@ -9,12 +9,17 @@ import doot from "@src/../public/images/switchIcon.svg";
 import Link from "next/link";
 import { getThemePreference, setThemeColors } from "@src/_utils/theme.utils";
 
-function Navbar({ lng }: { lng: string }) {
+function Navbar({ lng }: { lng: "es" | "en" }) {
     const [lightTheme, setLightTheme] = useState(true);
     const [active, setActive] = useState("");
     const [visible, setVisible] = useState(false);
 
-    const links = ["About", "Services", "Work", "Contact"];
+    const links = [
+        { href: "about", label: { en: "About us", es: "Quienes somos" } },
+        { href: "services", label: { en: "Services", es: "Servicios" } },
+        { href: "work", label: { en: "Our work", es: "Nuestros trabajos" } },
+        { href: "contact", label: { en: "Contact us", es: "Contacto" } },
+    ];
     const switchPosition = lightTheme ? "15px" : "0px";
 
     useEffect(() => {
@@ -51,9 +56,14 @@ function Navbar({ lng }: { lng: string }) {
             <div className={`${Styles.navbar__container} ${visible ? Styles.navbar__container__visible : ""}`}>
                 <ul className={Styles.navbar__links}>
                     {links.map((item, i) => (
-                        <li key={i} className={Styles.navbar__links__link} data-active={active === item} onClick={() => setActive(item)}>
-                            <Link href={`#${item.toLowerCase()}`} onClick={visible ? () => setVisible((prev) => !prev) : undefined}>
-                                {item}
+                        <li
+                            key={i}
+                            className={Styles.navbar__links__link}
+                            data-active={active === item.label[lng]}
+                            onClick={() => setActive(item.label[lng])}
+                        >
+                            <Link href={`#${item.href}`} onClick={visible ? () => setVisible((prev) => !prev) : undefined}>
+                                {item.label[lng]}
                             </Link>
                         </li>
                     ))}

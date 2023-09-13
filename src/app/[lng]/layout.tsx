@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 type LayoutType = {
     children: React.ReactNode;
     params: {
-        lng: string;
+        lng: "es" | "en";
     };
 };
 

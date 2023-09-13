@@ -1,42 +1,65 @@
 @import "../../styles/variables.scss";
 
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
-  @media (min-width: 720px) {
-    max-width: 1150px;
-    flex-direction: row;
-    gap: 48px;
-  }
-  &__img {
-    //flex: 1 1 0;
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
     @media (min-width: 720px) {
-        width: 40%;
-      }
-  }
-  &__reverse {
-    @media (min-width: 720px) {
-        flex-direction: row-reverse;
-      }
-  }
-  &__container {
-    @media (min-width: 720px) {
-      flex: 1 1 0;
+        max-width: 1150px;
+        flex-direction: row;
+        gap: 48px;
     }
+    &__img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        @media (min-width: 720px) {
+            width: 40%;
+            max-width: unset;
+        }
+    }
+    &__reverse {
+        @media (min-width: 720px) {
+            flex-direction: row-reverse;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        @media (min-width: 720px) {
+            flex: 1 1 0;
+        }
 
-    &__title {
-      text-align: center;
-      margin-bottom: 24px;
-      color: $links;
+        &__title {
+            text-align: center;
+            color: $links;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__button {
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            font-family: "Imprima", sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            border-radius: 40px;
+            border: 1px solid #1cceb5;
+            transition: transform linear 0.2s;
+            background: linear-gradient(90deg, #cf32ca 0%, #1cceb5 100%);
+            @media (min-width: 720px) {
+                font-size: 24px;
+                padding: 15px;
+            }
+            &:hover {
+                transform: scale(1.05) translateY(-2px);
+            }
+        }
     }
-    &__text {
-      text-align: center;
-    }
-  }
 }

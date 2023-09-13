@@ -1,6 +1,6 @@
 import { HomePage, AboutPage, ServicesPage, OurWorksPage } from "@src/_sections";
 import Contact from "@src/_sections/Contact/Contact";
-import { useTranslation } from "@src/i18n";
+import { asyncTranslation } from "@src/i18n";
 
 type PropsType = {
     params: {
@@ -9,7 +9,7 @@ type PropsType = {
 };
 
 export default async function MainPage({ params: { lng } }: PropsType) {
-    const { t } = await useTranslation(lng, "translation");
+    const { t } = await asyncTranslation(lng, "translation");
     return (
         <div>
             <HomePage option={lng} />

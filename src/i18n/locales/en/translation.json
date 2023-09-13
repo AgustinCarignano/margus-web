@@ -1,4 +1,19 @@
 {
-    "home": "Bienvenido a Margus! Somos creadores y diseñamos tu página web y logo pensados especialmente para vos",
-    "about": "At Margus, we are a passionate team of professionals who create and develop bespoke solutions to drive success in the digital world. Beyond designing websites and logos, we turn ideas into captivating and functional experiences that reflect the unique essence of each client. We transcend convention, weaving identity into every detail, from pixels to lines of code. Our passion for excellence drives us to be at the forefront of the latest trends, ensuring innovative solutions for every project. We have collaborated with inspiring clients in diverse industries, enriching our creative approach. Our satisfaction lies in the success and strong relationship we build with you. At Margus, we are ready to be part of your journey to digital excellence. Join us and transform your ideas into reality!"
+    "about_title": "About us",
+    "about_text": "At Margus, we are a passionate team of professionals who create and develop custom solutions to drive success in the digital world. We turn ideas into captivating and functional experiences that reflect the unique essence of each project, weaving the identity into every detail, from pixels to lines of code. Our satisfaction lies in the success and the strong relationship we build with you. We are ready to be part of your journey to digital excellence.",
+    "about_link": "Join us and transform your ideas into reality!",
+    "about_card_maru": "Hi! I'm<span>Maru</span>🙋🏻‍♀️, a natural-born creator. I'm a <span>UX/UI designer</span> and <span>FrontEnd</span> developer. I'm <span>passionate </span>about the <span>details</span>,I believe they make the difference. I love sports and nature. You'll always find me creating, in any area of life.",
+    "about_card_agus": "Hi! I'm <span>Agus</span>, a <span>Full Stack web developer</span>. I love creating beautiful, easy-to-use, and technically efficient websites. I'm <span>analytical </span> and incurable <span>perfectionist</span>, always learning something new to improve my skills.",
+    "services_title": "Our services",
+    "services_text": "At Margus, we're committed to providing you with a full range of services designed to meet your digital needs. Here are some of the work we do, but don't hesitate to contact us if what you're looking for doesn't quite fit what's described. We're confident that we can find the perfect solution for you.",
+    "services_card_title_1": "Redesign and advice for optimizing existing web pages",
+    "services_card_text_1": "We transform your existing website into a modern and efficient digital experience, to help you achieve your business goals and objectives. Whether you need a visual upgrade, better navigation, or faster loading speeds, we're committed to finding the solution that's best for you.",
+    "services_card_title_2": "Custom web design and development.",
+    "services_card_text_2": "We create unique digital solutions tailored to your needs. We are equipped to turn your ideas into reality, from aesthetic design to intuitive functionality, focusing on every detail.",
+    "services_card_title_3": "Logo design and creation",
+    "services_card_text_3": "We bring your brand's visual identity to life. We know that a logo is more than just an image; it's the visual expression of your values and essence. From colors and typography to shape and style, every detail is designed with a purpose. Trust us to create a logo that speaks volumes about your business, leaving a lasting impression on your customers.",
+    "works_title": "Our works",
+    "contact_title": "Contact us",
+    "footer_thanks": "<span class=\"remark-callToAction\">Thank you</span> for visit our page, <br />we hope to <span class=\"remark-links\">see you again soon!</span>",
+    "footer_rights": "All rights reserved."
 }

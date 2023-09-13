@@ -1,27 +1,30 @@
 import ServicesCard from "@src/_components/ServicesCard/ServicesCard";
 import React from "react";
-import { useTranslation } from "@src/i18n";
+import { asyncTranslation } from "@src/i18n";
 import Styles from "./services.module.scss";
 import service1 from "@public/images/service4.png";
 import service2 from "@public/images/service5.png";
 import service3 from "@public/images/service6.png";
 
 async function Services({ lng }: { lng: string }) {
-    const { t } = await useTranslation(lng, "translation");
+    const { t } = await asyncTranslation(lng, "translation");
     const services = [
         {
             name: t("services_card_title_1"),
             text: t("services_card_text_1"),
+            buttonLabel: t("services_card_button_1"),
             image: service1,
         },
         {
             name: t("services_card_title_2"),
             text: t("services_card_text_2"),
+            buttonLabel: t("services_card_button_2"),
             image: service2,
         },
         {
             name: t("services_card_title_3"),
             text: t("services_card_text_3"),
+            buttonLabel: t("services_card_button_3"),
             image: service3,
         },
     ];
@@ -31,7 +34,7 @@ async function Services({ lng }: { lng: string }) {
             <p className={Styles.servicesSection__text}>{t("services_text")}</p>
             <div className={Styles.servicesSection__cardsContainer}>
                 {services.map((s, i) => (
-                    <ServicesCard key={i} ImgSrc={s.image} title={s.name} content={s.text} reverse={i % 2 !== 0} />
+                    <ServicesCard key={i} ImgSrc={s.image} title={s.name} content={s.text} buttonLabel={s.buttonLabel} reverse={i % 2 !== 0} />
                 ))}
             </div>
         </section>
