@@ -25,8 +25,6 @@ function Slider({ children }: Props) {
                 breakpoints={{
                     1000: {
                         slidesPerView: 3,
-
-                        pagination: false,
                         loop: false,
                         navigation: { nextEl: ".controlNext", prevEl: ".controlPrev" },
                         allowTouchMove: false,
@@ -37,7 +35,9 @@ function Slider({ children }: Props) {
                 pagination={{ clickable: true, el: ".myPagination" }}
             >
                 {children.map((c, i) => (
-                    <SwiperSlide key={i}>{c}</SwiperSlide>
+                    <SwiperSlide key={i} className="slide">
+                        {c}
+                    </SwiperSlide>
                 ))}
             </Swiper>
             <div className={`myPagination ${style.pagination}`}></div>

@@ -94,8 +94,8 @@
             left: unset;
             background: none;
             box-shadow: none;
-            max-width: 700px;
-            gap: calc(29.19vw - 180.32px);
+            max-width: 750px;
+            gap: calc(19.43vw - 119.77px);
         }
     }
     &__links {
@@ -113,6 +113,9 @@
         &__link {
             color: var(--links-color);
             transition: all 0.2s;
+            @media (min-width: 1000px) {
+                width: max-content;
+            }
             & > a {
                 font-size: 1.6rem;
             }
