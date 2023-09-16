@@ -1,27 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import Styles from "./home.module.scss";
-import Utils from "../../styles/utils.module.scss";
 import homeImage from "@public/images/homeImage5.png";
+import { ILocaleHome } from "@src/_models/locales.type";
 
-function Home({ option }: { option: string }) {
+function Home({ content }: { content: ILocaleHome }) {
     return (
         <section className={Styles.homeSection}>
             <div>
                 <Image src={homeImage} width={446} height={446} alt="" />
             </div>
-            {option === "es" ? (
-                <h1>
-                    Hola! 👋🏻 <br></br>Te damos la bienvenida. <br></br> Somos creadores y diseñamos <br></br>tu{" "}
-                    <span className={Utils.highlightedText__fucsia}>página web</span> y <span className={Utils.highlightedText__aqua}>logo</span>{" "}
-                    pensados especialmente para vos
-                </h1>
-            ) : (
-                <h1>
-                    Welcome to Margus! 👋🏻 <br></br> We are creators and we design <span className={Utils.highlightedText__fucsia}>your website</span>{" "}
-                    and <span className={Utils.highlightedText__aqua}>logo</span> specifically for you
-                </h1>
-            )}
+            <h1 dangerouslySetInnerHTML={{ __html: content.title }}></h1>
         </section>
     );
 }

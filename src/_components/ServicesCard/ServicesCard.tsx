@@ -12,9 +12,6 @@ type Props = {
 };
 
 function ServicesCard({ ImgSrc, title, content, buttonLabel, reverse }: Props) {
-    // const modifier = reverse ? "--reverse" : "";
-
-    //in-line style de prueba
     return (
         <div className={`${Styles.card} ${reverse ? Styles.card__reverse : ""}`}>
             <Image src={ImgSrc} width={560} height={560} alt={title} className={Styles.card__img} />
@@ -30,5 +27,3 @@ function ServicesCard({ ImgSrc, title, content, buttonLabel, reverse }: Props) {
 }
 
 export default ServicesCard;
-
-// style={{ display: "flex", flexDirection: `${reverse ? "row-reverse" : "row"}` }}

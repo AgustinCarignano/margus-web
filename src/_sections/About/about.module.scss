@@ -26,10 +26,27 @@
         }
     }
     &__link {
-        margin-bottom: 40px;
-        font-size: 2rem;
-        text-decoration: underline;
-        color: $callToAction;
+        // margin-bottom: 40px;
+        // font-size: 2rem;
+        // text-decoration: underline;
+        // color: $callToAction;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        font-family: "Imprima", sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        border-radius: 40px;
+        margin: 0 auto;
+        transition: transform linear 0.2s;
+        background: linear-gradient(90deg, #cf32ca 0%, #1cceb5 100%);
+        @media (min-width: 720px) {
+            font-size: 24px;
+            padding: 15px;
+        }
+        &:hover {
+            transform: scale(1.05) translateY(-2px);
+        }
     }
     &__cardsContainer {
         display: grid;
@@ -39,7 +56,7 @@
         justify-content: center;
         // flex-direction: column;
         align-items: stretch;
-        margin: 0 auto;
+        margin: 24px auto;
         max-width: 422px;
         @media (min-width: 1000px) {
             // flex-direction: row;
@@ -47,7 +64,7 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
             width: 90%;
-            margin: 0 auto;
+            margin: 40px auto;
         }
     }
 }
