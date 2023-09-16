@@ -4,12 +4,13 @@
     padding: 10px;
     font-size: 14px;
     text-align: center;
+    float: left;
     font-family: "Imprima", sans-serif;
     font-weight: 400;
     width: 82px;
     border: 1px solid #1cceb5;
     background-color: transparent;
-    color: $primary;
+    color: var(--text-color);
     cursor: pointer;
     @media (min-width: 720px) {
         width: 125px;

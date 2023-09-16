@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import wsp from "@public/images/wspIcon.svg";
@@ -8,14 +9,15 @@ import env_hover from "@public/images/envIcon_hover.svg";
 import contactImg from "@public/images/contactImage.png";
 import Link from "next/link";
 import Styles from "./contact.module.scss";
+import { ILocaleContact } from "@src/_models/locales.type";
 
-function Contact({ title }: { title: string }) {
+function Contact({ content }: { content: ILocaleContact }) {
     const [envHover, setEnvHover] = useState(false);
     const [wspHover, setWspHover] = useState(false);
 
     return (
         <section className={Styles.contactSection} id="contact">
-            <h2 className={Styles.contactSection__title}>{title.toUpperCase()}</h2>
+            <h2 className={Styles.contactSection__title}>{content.title.toUpperCase()}</h2>
             <div className={Styles.contactSection__content}>
                 <div className={Styles.contactSection__content__left}>
                     <Image src={contactImg} width={443} height={446} alt="contact image" />

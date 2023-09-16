@@ -8,17 +8,18 @@ import sun from "@src/../public/images/sunIcon.svg";
 import doot from "@src/../public/images/switchIcon.svg";
 import Link from "next/link";
 import { getThemePreference, setThemeColors } from "@src/_utils/theme.utils";
+import { ILocaleGenerals, LocaleOptions } from "@src/_models/locales.type";
 
-function Navbar({ lng }: { lng: "es" | "en" }) {
+function Navbar({ lng, content }: { lng: LocaleOptions; content: ILocaleGenerals }) {
     const [lightTheme, setLightTheme] = useState(true);
     const [active, setActive] = useState("");
     const [visible, setVisible] = useState(false);
 
     const links = [
-        { href: "about", label: { en: "About us", es: "Quienes somos" } },
-        { href: "services", label: { en: "Services", es: "Servicios" } },
-        { href: "work", label: { en: "Our work", es: "Nuestros trabajos" } },
-        { href: "contact", label: { en: "Contact us", es: "Contacto" } },
+        { href: "about", label: content.navbar_about },
+        { href: "services", label: content.navbar_services },
+        { href: "work", label: content.navbar_works },
+        { href: "contact", label: content.navbar_contact },
     ];
     const switchPosition = lightTheme ? "15px" : "0px";
 
@@ -56,14 +57,9 @@ function Navbar({ lng }: { lng: "es" | "en" }) {
             <div className={`${Styles.navbar__container} ${visible ? Styles.navbar__container__visible : ""}`}>
                 <ul className={Styles.navbar__links}>
                     {links.map((item, i) => (
-                        <li
-                            key={i}
-                            className={Styles.navbar__links__link}
-                            data-active={active === item.label[lng]}
-                            onClick={() => setActive(item.label[lng])}
-                        >
+                        <li key={i} className={Styles.navbar__links__link} data-active={active === item.label} onClick={() => setActive(item.label)}>
                             <Link href={`#${item.href}`} onClick={visible ? () => setVisible((prev) => !prev) : undefined}>
-                                {item.label[lng]}
+                                {item.label}
                             </Link>
                         </li>
                     ))}

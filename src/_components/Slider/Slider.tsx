@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import style from "./slider.module.scss";
 import chevron from "@public/images/chevron.svg";
@@ -54,6 +55,3 @@ function Slider({ children }: Props) {
 }
 
 export default Slider;
-
-// onSwiper={(swiper) => console.log(swiper)}
-// onSlideChange={() => console.log("slide change")}

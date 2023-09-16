@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Styles from "./workCard.module.scss";
 
 type Props = {
@@ -9,22 +9,13 @@ type Props = {
 };
 
 export default function WorkCard({ text, img, title }: Props) {
-    const [isHovered, setIsHovered] = useState(false);
     const backgroundImageStyle = {
         backgroundImage: `url(${img.src})`,
     };
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
     return (
-        <div className={`${Styles.cardContainer} `} style={backgroundImageStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className={`${Styles.cardContainer} `} style={backgroundImageStyle}>
             <div className={Styles.overlay} /> {/* Capa semi-transparente */}
-            <h3 className={Styles.cardContainer__content}>{title}</h3>
+            <h2 className={Styles.cardContainer__content}>{title}</h2>
             <p className={Styles.cardContainer__content}>{text}</p>
         </div>
     );
