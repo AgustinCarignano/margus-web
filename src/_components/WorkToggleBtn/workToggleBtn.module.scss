@@ -20,12 +20,10 @@
     &__left {
         border-radius: 40px 0 0 40px;
         border-right: none;
-        // padding: 15px 25px 15px 34px;
     }
     &__right {
         border-radius: 0px 40px 40px 0px;
         border-left: none;
-        // padding: 15px 34px 15px 25px;
     }
     &__active {
         color: $background;

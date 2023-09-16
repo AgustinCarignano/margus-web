@@ -26,7 +26,7 @@ function AboutCard({ ImgSrc, title, content }: Props) {
                     <Image src={ImgSrc} width={400} height={400} alt={title} className={Styles.card__front__img} />
                     <Image src={handClick} width={80} height={80} alt="hand clic icon" className={Styles.card__front__icon} />
                     <Image src={handClickSmall} width={28} height={28} alt="hand clic icon" className={Styles.card__front__icon__small} />
-                    <h2 aria-description={title}>
+                    <h2 data-title={title}>
                         <span>{title}</span>
                     </h2>
                 </div>
