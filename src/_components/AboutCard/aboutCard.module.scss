@@ -10,7 +10,6 @@
     transition: all 0.5s;
     cursor: pointer;
     @media (min-width: 720px) {
-        // width: 100%;
         max-width: 562px;
         border: 3px solid $links;
     }
@@ -99,12 +98,12 @@
             }
         }
     }
-    p[aria-description="AGUS"] > span,
-    h2[aria-description="AGUS"] > span {
+    p[data-title="AGUS"] > span,
+    h2[data-title="AGUS"] > span {
         color: #cfa508;
     }
-    p[aria-description="MARU"] > span,
-    h2[aria-description="MARU"] > span {
+    p[data-title="MARU"] > span,
+    h2[data-title="MARU"] > span {
         color: #cf32ca;
     }
 }

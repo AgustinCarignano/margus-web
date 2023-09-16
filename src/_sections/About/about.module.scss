@@ -26,10 +26,6 @@
         }
     }
     &__link {
-        // margin-bottom: 40px;
-        // font-size: 2rem;
-        // text-decoration: underline;
-        // color: $callToAction;
         padding: 10px;
         font-size: 14px;
         text-align: center;
@@ -51,15 +47,12 @@
     &__cardsContainer {
         display: grid;
         grid-template-columns: 1fr;
-        // grid-template-rows: 1fr 1fr;
         gap: 24px;
         justify-content: center;
-        // flex-direction: column;
         align-items: stretch;
         margin: 24px auto;
         max-width: 422px;
         @media (min-width: 1000px) {
-            // flex-direction: row;
             max-width: unset;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
