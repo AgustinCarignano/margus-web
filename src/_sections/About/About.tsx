@@ -7,8 +7,8 @@ import maruCard from "@public/images/maruCard3.png";
 import { ILocaleAbout } from "@src/_models/locales.type";
 
 async function About({ content }: { content: ILocaleAbout }) {
-    const maruCardContent = <p aria-description="MARU" dangerouslySetInnerHTML={{ __html: content.card_maru }}></p>;
-    const agusCardContent = <p aria-description="AGUS" dangerouslySetInnerHTML={{ __html: content.card_agus }}></p>;
+    const maruCardContent = <p data-title="MARU" dangerouslySetInnerHTML={{ __html: content.card_maru }}></p>;
+    const agusCardContent = <p data-title="AGUS" dangerouslySetInnerHTML={{ __html: content.card_agus }}></p>;
     return (
         <section className={Styles.aboutSection} id="about">
             <h2 className={Styles.aboutSection__title}>{content.title.toUpperCase()}</h2>
